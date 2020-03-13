@@ -142,9 +142,6 @@ class NeuralNetwork:
         # # find maximum value in sliding window and create new array
         self.convolve = self.MaxPooling(input_, poolSize, stride)
 
-    def Softmax():
-        pass
-
     def TrainCNN(self, epochs):
         self.filters = np.array(self.filters)
         self.weights1 = np.random.rand(self.lastLayer * int(self.convolve.shape[1] * self.convolve.shape[2] / 4**self.maxPoolCount))
