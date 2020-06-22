@@ -194,9 +194,9 @@ class NeuralNetwork:
 
 
 nn = NeuralNetwork(x_train[0])
-nn.Conv2D(10, 'relu')
-nn.Conv2D(20, 'relu')
-nn.Conv2D(30, 'relu')
+nn.Conv2D(10, activation='relu')
+nn.Conv2D(20, activation='relu')
+nn.Conv2D(30, activation='relu')
 nn.fcLayer(4096, 'relu')
 nn.fcLayer(4096, 'relu')
 nn.fcLayer(10, 'SoftMax')
