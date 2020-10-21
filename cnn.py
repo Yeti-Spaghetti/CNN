@@ -132,15 +132,7 @@ class NeuralNetwork:
         # add padding to image border if kernel doesn't divide evenly
         input_ = self.MaxPool_padding(input_, poolSize, stride)
 
-        # perform max pool
-        shape = input_.shape
-        shapeList = list(shape)
-        shapeList[-2] = int(((input_.shape[-2]-poolSize)/stride)+1)
-        shapeList[-1] = int(((input_.shape[-1]-poolSize)/stride)+1)
-        shape = tuple(shapeList)
-        maxPoolArr = np.zeros(shape)
-
-        # # find maximum value in sliding window and create new array
+        # find maximum value in sliding window and create new array
         self.convolve = self.MaxPooling(input_, poolSize, stride)
 
     def fcLayer(self, size=4096, activation='relu'):
